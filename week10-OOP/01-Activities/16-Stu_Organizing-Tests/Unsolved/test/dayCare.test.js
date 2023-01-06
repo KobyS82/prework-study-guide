@@ -7,6 +7,7 @@ describe("DayCare", () => {
       const dayCare = new DayCare();
 
       // TODO: Add a comment describing the purpose of the following statement
+      // Checks to see if dayCare equals this
       expect(dayCare).toEqual({ children: [], capacity: 3, ageLimit: 6 });
     });
   });
@@ -14,6 +15,7 @@ describe("DayCare", () => {
   describe("addChild", () => {
     it("should add a child to the 'children' array", () => {
       // TODO: Add a comment describing the purpose of the following declarations
+      
       const child = new Child("Tammy", 1);
       const dayCare = new DayCare();
 
@@ -78,6 +80,7 @@ describe("DayCare", () => {
       dayCare.children = [child1, child2, child3];
 
       // TODO: Add a comment describing the purpose of the following declaration
+      // Find the index of 
       const removed = dayCare.pickupChild(child2.name);
 
       expect(removed).toBe(child2);
@@ -97,12 +100,15 @@ describe("DayCare", () => {
       dayCare.children = [child1, child2, child3];
 
       // TODO: Add a comment describing the purpose of the following declaration
+      // attemps to pick up child that doesn't exist
       const removed = dayCare.pickupChild("Fred");
 
       // TODO: Add a comment describing the purpose of the following statement
+      // (return nothing) 
       expect(typeof removed).toEqual("undefined");
 
       // TODO: Add a comment describing the purpose of the following statement
+      // Verify nothing was removed
       expect(dayCare.children).toEqual([child1, child2, child3]);
     });
   });
